@@ -1,0 +1,20 @@
+{
+  "name": "@baked/react-hotkeys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -w",
+    "build": "tsc -p tsconfig.json",
+    "publish": "npm run build && npm publish"
+  },
+  "author": "baked-dev",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.11"
+  }
+}
