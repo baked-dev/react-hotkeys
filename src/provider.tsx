@@ -18,12 +18,12 @@ const HotkeyManagerContext = createContext<HotkeyManager | undefined>(
 );
 
 export const useHotkeyManager = () => {
-  const api = useContext(HotkeyManagerContext);
-  if (!api)
+  const manager = useContext(HotkeyManagerContext);
+  if (!manager)
     throw new Error(
       "HotkeyManager Consumer needs to be child of at least one HotkeyManager Prvoider."
     );
-  return api;
+  return manager;
 };
 
 export type HotkeyManagerComponentProps = {
@@ -47,7 +47,7 @@ export function withHotkeyManager<T extends ComponentType<any>>(
   return (props) => {
     return (
       <HotkeyManagerContext.Consumer>
-        {(api) => <C {...props} api={api} />}
+        {(manager) => <C {...props} manager={manager} />}
       </HotkeyManagerContext.Consumer>
     );
   };
