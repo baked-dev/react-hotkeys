@@ -72,7 +72,7 @@ class Example extends Component {
 export default withHotkeyManager(Example);
 ```
 
-##### with tyoescript:
+##### with typescript:
 
 ```ts
 import React, { Component } from "react";
